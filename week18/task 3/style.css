@@ -1,0 +1,48 @@
+.flex-container {
+   max-width: 1300px;
+   margin: 20px auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+   gap: 30px;
+}
+.flex-elem {
+   text-align: center;
+   padding: 10px;
+   background-color: #d7cccc;
+   border: 2px solid #775b5b;
+   border-radius: 9px;
+}
+img {
+   width: 300px;
+   object-fit: cover;
+}
+.info {
+   font-size: 14px;
+}
+h2,
+p {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rating-container {
+   align-items: flex-end;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: center;
+}
+
+.rating-container input {
+   display: none;
+}
+
+.rating-container label {
+   cursor: pointer;
+   width: 30px;
+   height: 30px;
+   background-image: url("/star-regular.svg");
+   background-size: cover;
+}
+
+.rating-container input:checked ~ label {
+   background-image: url("/star-solid.svg");
+}
